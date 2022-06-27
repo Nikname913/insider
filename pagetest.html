@@ -1,0 +1,680 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<style>@import url('https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap');</style>
+<link rel="stylesheet" href="styles.css">
+<script type="text/javascript" src="dispatcher.js" async></script>
+<style>
+  @keyframes forTitleImage {   
+    
+    0% { filter: grayscale(0); }   
+    50% { filter: grayscale(1); } 
+    100% { filter: grayscale(0); }
+    
+  }
+  body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .testSite {
+    display: block;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    min-width: 1500px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background-color: #0a0a0a;
+  }
+  .testSite header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid rgba(218, 218, 218, 0.2);
+  }
+  .testSite header h1 {
+    font-size: 34px;
+    letter-spacing: 2;
+    padding-bottom: 2px;
+    color: white;
+    font-family: 'Freckle Face', cursive;
+    font-weight: 200;
+  }
+  .title-image {
+    display: block;  
+    position: relative;
+    box-sizing: border-box;
+    width: 844px;
+    box-shadow: 0px 0px 3.5px black;
+    animation-name: forTitleImage;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  .ava-image {
+    display: block;  
+    position: relative;
+    box-sizing: border-box;
+    width: 144px;
+    height: 144px;
+    box-shadow: 0px 0px 3.5px black;
+    border-radius: 50%;
+  }
+  .aboutAutor {
+    display: flex !important;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    width: 844px;
+    height: auto;
+    min-height: 200px;
+  }
+  .aboutAutor__content {
+    display: block;
+    position: relative;
+    width: 700px;
+    height: auto;
+    min-height: 60px;
+    padding-right: 46px;
+  }
+  .uslugi {
+    display: block;
+    position: relative;
+    width: 844px;
+    height: auto;
+    min-height: 200px;
+  }
+  .uslugi__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+  }
+  .ava-uslugi {
+    display: block;  
+    position: relative;
+    box-sizing: border-box;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+  }
+  .button {
+    display: block;
+    position: relative;
+    width: 240px;
+    height: 54px;
+    font-size: 13px;
+    line-height: 50px;
+    border-radius: 4px;
+    background-color: #303E59;
+    box-shadow: 0px 0px 4px black;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+  }
+  .content > * { 
+    display: block; 
+    margin: 0; 
+    padding: 0; 
+  }
+  .content p { 
+    width: 520px; 
+    line-height: 28px;
+    text-align: center;
+    color: white;
+    font-weight: 200;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .tilda {
+    font-size: 50px;
+    margin-top: 20px;
+    margin-bottom: 22px;
+    color: white;
+  }
+  footer.footer {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-top: 1px solid rgba(218, 218, 218, 0.2);
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  footer.footer p {
+    display: block;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    font-weight: 200;
+    margin: 0;
+  }
+  footer.footer .social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    width: 300px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 14px;
+  }
+  footer.footer .social .icon {
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-image: url('image/telegramIcon.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    margin-right: 12px;
+    overflow: hidden;
+  }
+  .learnModule {
+    display: block;
+    position: fixed;
+    width: 500px;
+    height: auto;
+    min-height: 200px;
+    border-radius: 8px;
+    background-color: #303E59;
+    box-shadow: 0px 0px 5.5px black;
+    z-index: 2000;
+    left: 100%;
+    margin-left: -540px;
+    top: 0;
+    margin-top: 40px;
+    color: white;
+    transform: translateX(560px);
+    transition: all 500ms;
+  }
+  .learnModule h5 {
+    display: block;
+    position: relative;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding-left: 26px;
+  }
+  .learnModule__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-left: 26px;
+    padding-right: 26px;
+    margin-bottom: 26px;
+  }
+  .learnModule__content__img {
+    display: block;
+    position: relative;
+    width: 140px;
+  }
+  .learnModule__content__back {
+    display: block;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    background-image: url('image/backicon.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  #learnHeadline {
+    display: block;
+    position: relative;
+    width: 270px;
+    font-size: 14px;
+    line-height: 22px;
+    margin-left: 20px;
+  }
+  #learnTextContent {
+    display: block;
+    position: relative;
+    width: 440px;
+    font-size: 14px;
+    line-height: 23px;
+  }
+  .learnModule__close {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url('image/insCloseIcon.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 100%;
+    margin-left: -44px;
+    margin-top: 14px;
+    cursor: pointer;
+    z-index: 10;
+  }
+</style>
+<section id="ds-app">
+</section>
+
+<main class="testSite">
+  
+  <section class="learnModule">
+    
+    <span class="learnModule__close"></span>
+    <h5>обучающий модуль инсайдера</h5>
+    <div class="learnModule__content">
+      
+      <img 
+        alt="" 
+        src="image/insMan.png"
+        class="learnModule__content__img"
+      />
+      <span id="learnHeadline"></span>
+      
+    </div>
+    <div class="learnModule__content">
+      
+      <span id="learnTextContent"></span>
+      
+    </div>
+    <div class="learnModule__content">
+      
+      <span 
+        class="learnModule__content__back"
+        id="learnStepButtonBack"
+      ></span>
+      <span 
+        id="learnStepButton"
+        class="button" 
+        style="z-index: 2; background-color: #0a0a0a; line-height: 52px;"
+      >
+      
+      готово, все открылось
+      
+    </span>
+      
+    </div>
+    
+  </section>
+  
+  <header>
+    <h1>~ Insider Tag Manager ~</h1>
+  </header>
+  <section class="content">
+    
+    <p style="margin-top: 40px; margin-bottom: 40px;">
+      
+      веб платформа, которая избавит от вас от необходимости обращаться к программисту при работе с вашим сайтом. установка целей, динамический контент, электронная коммерция и другие полезные функции
+      
+    </p>
+    
+    <span 
+      class="button" 
+      style="position: absolute; top: 0; left: 50%; margin-left: -120px; margin-top: 650px; z-index: 2; box-sizing: border-box;"
+    >
+      
+      я кнопка для примера
+      
+    </span>
+    <img 
+      alt="" 
+      src="image/screen1.jpg"
+      class="title-image"
+    />
+    
+    <span class="tilda" style="margin-top: 30px;">~</span>
+    <div class="aboutAutor">
+      
+      <img 
+        alt="" 
+        src="image/screen2.jpg"
+        class="ava-image"
+      />
+      <div class="aboutAutor__content">
+        
+        <p style="width: 100%; text-align: left; margin-top: 0; margin-bottom: 0; padding-left: 30px;">
+          
+          привет, меня зовут николай шипов, я react разработчик, до 2018 года четыре года работал в сфере интернет маркетинга. был ppc специалистом, потом трудился веб аналитиком. нам постоянно приходилось работать с сайтами клиентов: устанавливать цели метрики, аналитикс, пиксель фейсбука и тд. обычно мы ставили задачки на штатных программистов, либо просили сделать необходимые манипуляции на стороне клиента. иногда приходилось делать все самим, что было наиболее трудным. цель на просмотр страницы еще куда ни шло, но тип "javascript событие" уже создавала много головной боли. в какой-то момент на помощь пришел gtm, но и там был элемент работы с селекторами и триггерами, что тоже означало некий порог входа, особенно для новых специалистов.
+          
+        </p>
+        
+      </div>
+      
+    </div>
+    <span class="tilda" style="margin-top: 38px; margin-bottom: 38px; font-size: 22px;">в итоге возникла идея сделать инсайдер. что это, если кратко?</span>
+    <div class="aboutAutor">
+      <div class="aboutAutor__content" style="width: 100%;">
+        
+        <p style="width: 100%; text-align: center; margin-top: 0; margin-bottom: 0; padding-left: 30px;">
+          
+          это код, который вы один раз размещаете на сайте, и получаете возможность пользоваться платформой, позволяющей производить различные манипуляции на сайте. избегая cms, кода сайта, помощи разработчиков и тд. инсайдер совершенно не мешает работе сайта и недоступен для ваших посетителей. сама платформа реализована полностью на javascript, у вас не будет никакого лишнего html кода, а легкость конечного js-кода и современный подход к разработке не будут замедлять загрузку страниц сайта и негативно влиять на поведенческие факторы
+          
+        </p>
+        
+      </div>
+    </div>
+    <span class="tilda" style="margin-top: 14px; margin-bottom: 38px; font-size: 22px;">основные функции платформы</span>
+    <div class="uslugi">
+      
+      <div class="uslugi__content">
+        <img 
+          alt="" 
+          src="image/trava.png"
+          class="ava-uslugi"
+        />
+        <p style="width: 660px; text-align: left; margin-left: 30px;">
+          
+          установка кода на сайт. фактически, платформа не ограничивает вас в том, что именно вы будете размещать на своем сайте. это может быть абсолютно любой js код, начиная от счетчика яндекс метрики, и заканчивая скриптом, который будет подставлять разные баннеры в зависимости от utm метки. это самая широкая функция, которая позволяет в полной мере почувствовать возможности диспетчера тегов</p>
+      </div>
+      <div class="uslugi__content">
+        <img 
+          alt="" 
+          src="image/pustyn.png"
+          class="ava-uslugi"
+        />
+        <p style="width: 660px; text-align: left; margin-left: 30px;">
+          
+          установка целей метрики и analytics. сервис позволяет буквально в несколько кликов выбрать нужные элементы и определить, какие цели на них нужно поставить - и тут же опубликовать все изменения на сайте</p>
+      </div>
+      <div class="uslugi__content">
+        <img 
+          alt="" 
+          src="image/gora.png"
+          class="ava-uslugi"
+        />
+        <p style="width: 660px; text-align: left; margin-left: 30px;">
+          
+          динамическая подмена контента на сайте. мультилендинги в целом, и отдельные элементы контента в частности очень полезны для того, чтобы посетителям, пришедшим с разных источников трафика, предоставлять максимально релеватный контент на странице. это могут быть как отдельные каналы, такие как таргетированная реклама или объявления яндекс директ, так и отдельные ссылки, привязанные каждая к своему рекламному креативу. платформа позволит вам на лету менять заголовки или отдельные тексты на сайте под такие нужды</p>
+      </div>
+      <div class="uslugi__content">
+        <img 
+          alt="" 
+          src="image/oasis.png"
+          class="ava-uslugi"
+        />
+        <p style="width: 660px; text-align: left; margin-left: 30px;">
+          
+          поддержка электронной коммерции яндекса. одна из важных функций, полезная для интернет-магазинов, это возможность быстро установить скрипт электронной коммерции яндекса на сайт. это функция в плане установки значительно сложнее, чем установка целей, и в обычных условиях без помощи программиста точно не обойтись. с инсайдером вы сможете сделать это самостоятельно, не вникая в техническую часть вопроса а просто выбрав нужные элементы на сайте</p>
+      </div>
+      
+    </div>
+    <span class="tilda" style="margin-top: 24px; margin-bottom: 48px; font-size: 22px;">хотите попробовать? вы убедитесь, это просто</span>
+    
+    <span 
+      class="button" 
+      id="goPracticButton"
+      style="z-index: 2; margin-bottom: 20px;"
+    >
+      
+      попробовать прямо на этом сайте
+      
+    </span>
+      
+  </section>
+  <footer class="footer">
+    
+    <p style="letter-spacing: 1px; margin-bottom: 8px;">© insider tag manager</p>
+    <p style="margin-bottom: 8px;">копирование материалов с сайта без согласия владельца запрещено</p>
+    <p>разработка решения nikdeveloper | gorilla web</p>
+    <div class="social">
+      
+      <span class="icon">
+        <a href="https://t.me/nikname913" target="_blank" 
+          style="display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+        ></a>
+      </span>
+      <p>nikname913 * пишите или звоните</p>
+      
+    </div>
+    
+  </footer>
+  
+</main>
+<script type="text/javascript">
+
+  function stepOne() {
+    
+    localStorage.setItem('learnInsider', JSON.stringify({
+      learnHeadline: 'привет, это обучающий модуль инсайдера! сейчас мы на простом примере разберем, как с ним работать',
+      learnTextContent: `
+        шаг 1. определение задачи. итак, допустим, нам нужно поставить цель яндекс метрики вот на ту кнопку с надписью "я кнопка для примера". 
+        на данной странице уже установлен инсайдер. запустить его очень просто, нажмите кнопку "тильда" на вашей клавиатуре, в русской раскладке на этой кнопке буква "ё". 
+        при этом менять раскладку не нужно<br><br>сейчас нажмите кнопку тильда и после того как откроется рабочая область инсайдера, нажмите готово
+      `,
+      learnButton: 'готово, все открылось'
+    }))
+    
+  }
+  
+  function stepTwo() {
+    
+    localStorage.setItem('learnInsider', JSON.stringify({
+      learnHeadline: 'привет, это обучающий модуль инсайдера! сейчас мы на простом примере разберем, как с ним работать',
+      learnTextContent: `
+        шаг 2. отлично, сейчас открылось основное меню сервиса. для удобства все функции разбиты на отдельные вкладки, 
+        чтобы вы могли работать с каждым направлением отдельно. в данном уроке мы будем работать с функцией установки целей на элементы сайта.
+        нажмите далее, чтобы продолжить
+      `,
+      learnButton: 'поехали дальше'
+    }))
+    
+  }
+  
+  function stepThree() {
+    
+    localStorage.setItem('learnInsider', JSON.stringify({
+      learnHeadline: 'привет, это обучающий модуль инсайдера! сейчас мы на простом примере разберем, как с ним работать',
+      learnTextContent: `
+        шаг 3. перед началом работы вам нужно авторизоваться. инсайдер работает удаленно, из коробки, основной функционал расположен на сервере. важно! 
+        сервис на сохраняет никакие данные о вашем сайте, данные о посещениях или заказах, только характеристики отдельных элементов,
+        над которыми должны проводиться манипуляции.<br><br>итак, для авторизации нажмите на строчку "авторизоваться" в нижней части основного окна сервиса. 
+        в окне ввода пароля введите qwerty12345
+      `,
+      learnButton: 'получилось авторизоваться'
+    }))
+    
+  }
+  
+  function stepFour() {
+    
+    localStorage.setItem('learnInsider', JSON.stringify({
+      learnHeadline: 'привет, это обучающий модуль инсайдера! сейчас мы на простом примере разберем, как с ним работать',
+      learnTextContent: `
+        шаг 4. прекрасно, вы прошли авторизацию. теперь самое ключевое, принцип работы инсайдера. он очень простой - у вас есть элемент, 
+        над которым нужно совершить какое-то действие, и вам нужно "показать" его инсайдеру. чтобы сделать это, кликните по нему правой кнопкой мыши<br><br>
+        давайте попробуем. на сайте есть кнопка с текстом "я кнопка для примера" - нажмите на нее правой кнопкой мыши<br>
+        появилось окошко с информацией? все верно, это инсайдер дал понять вам, что считал данные об элементе и сохранил их в локальный буфер. 
+        нажмите на ОК и продолжим
+      `,
+      learnButton: 'поехали дальше'
+    }))
+    
+  }
+  
+  function stepFive() {
+    
+    localStorage.setItem('learnInsider', JSON.stringify({
+      learnHeadline: 'привет, это обучающий модуль инсайдера! сейчас мы на простом примере разберем, как с ним работать',
+      learnTextContent: `
+        шаг 5. вы выбрали элемент, теперь осталось только выбрать, что с ним нужно сделать и сохранить настройку. в этом уроке мы выбираем пример с установкой цели метрики. 
+        нажмите на соответствующий пункт меню в основном окне сервиса<br><br>
+        получилось? так выглядит рабочая область для настроек каждого тега. в случае с целями, вверху находится окно с уже установленными целями - они неактивны, 
+        приведены для примера - ниже краткая форма завершения настроек. еще раз прописан выбранный элемент, поле для ввода номера метрики и поле для ввода ID цели, 
+        его нужно написать такой же, как в интерфейсе яндекс метрики, это важно. нажмите далее, заполним эту форму
+      `,
+      learnButton: 'поехали дальше'
+    }))
+    
+  }
+  
+  function stepSix() {
+    
+    localStorage.setItem('learnInsider', JSON.stringify({
+      learnHeadline: 'привет, это обучающий модуль инсайдера! сейчас мы на простом примере разберем, как с ним работать',
+      learnTextContent: `
+        шаг 6. это тестовый проект, поэтому не так важно, что мы введем. номер счетчика метрики, как правило, длиной от 6 до 8 символов, а ID цели должен состоять
+        из латинских букв и чисел, допустимы нижние подчеркивания. не будем мудрствовать, впишите номер счетчика 12345678, ID цели пусть будет
+        myNewGoal. поле "тип события" пока оставьте незаполненным, подробнее о нем вы сможете прочитать в документации, заполнять его необязательно<br><br>
+        после этого нажмите сохранить цель<br>
+        и переходите к следующему шагу
+      `,
+      learnButton: 'поехали дальше'
+    }))
+    
+  }
+  
+  function stepSeven() {
+    
+    localStorage.setItem('learnInsider', JSON.stringify({
+      learnHeadline: 'привет, это обучающий модуль инсайдера! сейчас мы на простом примере разберем, как с ним работать',
+      learnTextContent: `
+        шаг 7. обратите внимание на список целей вверху окна - там появилось что-то новое. да, все вот так просто, теперь вам нужно просто обновить сайт, чтобы изменения заработали
+        на вашем устройстве, у ваших пользователей все включится при их следующем заходе на сайт. также вы сможете удалять цели, просто нажав на крестик справа от каждой из них.
+        в этом уроке функция удаления заблокирована, во избежание неудобств для других обучающихся
+      `,
+      learnButton: 'закончить урок'
+    }))
+    
+  }
+    
+  
+  function stepDefault() {
+    
+    localStorage.setItem('learnInsider', JSON.stringify({
+      learnHeadline: 'привет, это обучающий модуль инсайдера! сейчас мы на простом примере разберем, как с ним работать',
+      learnTextContent: `привет, это обучающий модуль инсайдера! сейчас мы на простом примере разберем, как с ним работать`,
+      learnButton: 'поехали дальше'
+    }))
+    
+  }
+  
+  function ContentSwitcher() {
+    
+    const step = localStorage.getItem('step')
+    switch(step) {
+      
+      case '1':
+        stepOne()
+        break
+        
+      case '2':
+        stepTwo()
+        break
+        
+      case '3':
+        stepThree()
+        break
+        
+      case '4':
+        stepFour()
+        break
+        
+      case '5':
+        stepFive()
+        break
+        
+      case '6':
+        stepSix()
+        break
+        
+      case '7':
+        stepSeven()
+        break
+      
+      default:
+        stepDefault()
+        break
+      
+    }
+    
+  }
+  
+  (() => {
+    
+    localStorage.getItem('step') === null && localStorage.setItem('step', 1)
+    localStorage.getItem('learnBlock') === null && localStorage.setItem('learnBlock', 'false')
+    
+    document.getElementById('goPracticButton').addEventListener('click', () => {
+      
+      document.getElementsByTagName('header')[0].scrollIntoView({ behavior: 'smooth' })
+      localStorage.setItem('learnBlock', 'true')
+      
+    })
+    
+    document.getElementsByClassName('learnModule__close')[0].addEventListener('click', () => {
+      
+      localStorage.setItem('learnBlock', 'false')
+      
+    })
+    
+    localStorage.getItem('learnInsider') === null && localStorage.setItem('learnInsider', JSON.stringify({
+      learnHeadline: 'привет, это обучающий модуль инсайдера! сейчас мы на простом примере разберем, как с ним работать',
+      learnTextContent: `
+        шаг 1. определение задачи. итак, допустим, нам нужно поставить цель яндекс метрики вот на ту кнопку с надписью "я кнопка для примера". 
+        на данной странице уже установлен инсайдер. запустить его очень просто, нажмите кнопку "тильда" на вашей клавиатуре, в русской раскладке на этой кнопке буква "ё" 
+        при этом менять раскладку не нужно.<br><br>сейчас нажмите кнопку тильду и после того как откроется рабочая область инсайдера нажмите готово
+      `,
+      learnButton: 'готово, все открылось'
+    }))
+    
+    document.getElementById('learnStepButton').addEventListener('click', e => {
+      
+      +localStorage.getItem('step') < 7 && localStorage.setItem('step', +localStorage.getItem('step') + 1)
+      ContentSwitcher()
+      
+      if ( e.target.innerText === 'закончить урок' ) {
+        
+        fetch(`https://metoo-app.ru/insider/dataController.php?key=DELETE_GOAL&file=metoo-app-ru&data=myNewGoal`)
+        localStorage.clear()
+        
+        document.location.href = document.location.href
+        
+      }
+      
+    })
+    document.getElementById('learnStepButtonBack').addEventListener('click', e => {
+      
+      +localStorage.getItem('step') > 1 && localStorage.setItem('step', +localStorage.getItem('step') - 1)
+      ContentSwitcher()
+      
+    })
+    
+    const stepContentCheker = setInterval(() => {
+      
+      document.getElementById('learnHeadline').innerHTML = JSON.parse(localStorage.getItem('learnInsider')).learnHeadline
+      document.getElementById('learnTextContent').innerHTML = JSON.parse(localStorage.getItem('learnInsider')).learnTextContent
+      document.getElementById('learnStepButton').innerHTML = JSON.parse(localStorage.getItem('learnInsider')).learnButton
+      
+      localStorage.getItem('learnBlock') === 'false'
+      ? document.getElementsByClassName('learnModule')[0].style.transform = 'translateX(560px)'
+      : document.getElementsByClassName('learnModule')[0].style.transform = 'translateX(0px)'
+      
+    }, 400)
+    
+  })()
+  
+</script>

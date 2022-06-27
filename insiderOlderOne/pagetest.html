@@ -1,0 +1,115 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<link rel="stylesheet" href="index.css">
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .testSite {
+    display: block;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  .testSite header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    width: 100%;
+    height: 100px;
+    box-shadow: 0px 0px 2.5px grey;
+  }
+  .testSite header h1 {
+    font-size: 24px;
+    letter-spacing: 2;
+    padding-bottom: 2px;
+  }
+  .button {
+    display: block;
+    position: relative;
+    width: 220px;
+    height: 54px;
+    font-size: 13px;
+    line-height: 52px;
+    border-radius: 4px;
+    background-color: violet;
+    box-shadow: 0px 0px 2.5px black;
+    text-align: center;
+  }
+  .testSite header .button {
+    position: absolute;
+    left: 100%;
+    margin-left: -400px;
+  }
+  .testSite header .button:nth-child(2) {
+    margin-left: -640px;
+  }
+  .content > * { 
+    display: block; 
+    margin: 0; 
+    padding: 0; 
+  }
+  .content p { 
+    width: 520px; 
+    line-height: 22px;
+    text-align: center;
+  }
+  .content h2 {
+    margin-top: 60px;
+    margin-bottom: 50px;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .tilda {
+    font-size: 50px;
+    margin-top: 20px;
+    margin-bottom: 22px;
+  }
+</style>
+<section id="ds-app">
+  <!-- dispatcher render -->
+  <!-- Aside -->
+  <!-- YandexGoalsBoard -->
+</section>
+
+<main class="testSite">
+  
+  <header>
+    <h1>~ celestaver ~</h1>
+    <span class="button">заказать звонок</span>
+    <span class="button">оставить заявку</span>
+  </header>
+  <section class="content">
+    
+    <h2>ДОБРО ПОЖАЛОВАТЬ В ЦЕЛЕСТАВЕР</h2>
+    <p>на этой демостранице вы можете ознакомиться с основным функционалом сервиса. вы убедитесь, что пользоваться целеставером крайне удобно и просто, а его возможности покрывают почти все ваши потребности</p>
+    <span class="tilda">~</span>
+    <p>итак, вам нужно поставить цели метрики</p>
+    <p>вооон на ту кнопку справа вверху сайта</p>
+    <p>у вас есть номер счетчика, пусть будет 12685477, и идентификатор самой цели, который вы взяли в метрике, goalClick</p>
+    <span class="tilda" style="font-size: 30px">версия 1 - вы пишите код</span>
+    <p>какой-нибудь скрипт на нативном js или может даже jquery, который бы по селектору нащел нужный dom узел и привязал к нему соответствующее событие. уровень топорности - максимальный, оптимизация труда - нулевая. чтобы что-то скорректировать нужно <i style="font-style: normal; color: red;">опять лезть в сайт</i></p>
+    <span class="tilda" style="font-size: 30px">версия 2 - диспетчер тегов</span>
+    <p>это уже что-то неплохое, возможность править все настройки из отдельного места, не нужны доступы к сайту. вопрос сноровки имеет значение тк разобраться в настройках селекторов и правилах активации тегов не так чтобы очень просто</p>
+    <span class="tilda" style="font-size: 30px">версия 3 - самая <i style="text-decoration: line-through; font-style: normal; color: red;">печальная</i> популярная</span>
+    <p>вы просите кого-то написать вам код. а дальше все как в версии 1, с теми же самыми последствиями. плюс как правило у этого самого "кого-то" есть куча других задач и ваша маленькая правочка на три минуты работы стандартного программиста растягивается .. <i style="font-style: normal; color: red;">дольше</i> чем на три минуты, как правило</p>
+    
+  </section>
+  
+</main>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="index.js"></script>
